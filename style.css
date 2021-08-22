@@ -1,11 +1,17 @@
 .grid {
     display: grid;
     background-color: blueviolet;
+    border: 20px ridge rgb(177, 6, 6);
+    height: 450px;
+    width: 450px;
+    align-items:absolute;
 }
 .gridItem {
     padding: 50%;
     box-sizing: border-box;
-    background-color: plum;
-    border: 1px solid black;
+    background-color:white;
+    
 }
-
+.title {
+    text-align: center;
+}
