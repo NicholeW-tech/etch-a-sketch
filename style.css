@@ -1,9 +1,10 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(16, auto);
     background-color: blueviolet;
 }
 .gridItem {
+    padding: 20px;
+    box-sizing: border-box;
     background-color: plum;
     border: 1px solid black;
 }

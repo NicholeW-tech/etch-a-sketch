@@ -5,25 +5,22 @@ function createGrid(row,column) {
     for (let i= 1; i <= (row*column); i++) {
         
         const square= document.createElement('div');
+        container.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
+        container.style.gridTemplateRows = `repeat(${row}, 1fr)`;
         square.classList.add('gridItem');
-        square.setAttribute('id','cell')
-        square.textContent = 'Hello kitty'
+        
        container.appendChild(square);
     }
 }
 createGrid(16,16);
 
-
-
-const cells= document.getElementById('cell');
-
-cells.addEventListener("mouseover", func);
-cells.addEventListener("mouseout", func1);
-
-function func() {
-    cells.setAttribute("style", "background-color: black;")
+function mouseOver(target) {
+    target.style.backgroundColor= 'black';
 }
 
-function func1() {
-    cells.setAttribute("style", "background-color: plum")
-}
+container.addEventListener("mouseover", function(e) {
+    target = e.target;
+    if(target.matches("div")) {
+        mouseOver(target);
+    }
+});
