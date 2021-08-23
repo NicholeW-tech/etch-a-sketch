@@ -1,12 +1,12 @@
 const container = document.querySelector('#container');
 container.classList.add('grid');
 
-function createGrid(row,column) {
-    for (let i= 1; i <= (row*column); i++) {
+function createGrid(gridNumber) {
+    for (let i= 1; i <= (gridNumber * gridNumber); i++) {
         
         const square= document.createElement('div');
-        container.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
-        container.style.gridTemplateRows = `repeat(${row}, 1fr)`;
+        container.style.gridTemplateColumns = `repeat(${gridNumber}, 1fr)`;
+        container.style.gridTemplateRows = `repeat(${gridNumber}, 1fr)`;
         square.classList.add('gridItem');
         
        container.appendChild(square);
@@ -23,4 +23,14 @@ container.addEventListener("mouseover", function(e) {
     if(target.matches("div")) {
         mouseOver(target);
     }
+});
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+    document.querySelectorAll("div").forEach(square => square.style.backgroundColor= "white");
+btn.addEventListener('click', () => {
+    let newGridNumber= prompt("Choose size for your grid");
+    createGrid(newGridNumber);
+} )
+   
 });
