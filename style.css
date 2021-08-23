@@ -10,7 +10,8 @@
     padding: 50%;
     box-sizing: content-box;
     background-color:white;
-    
+    max-height: 450px;
+    max-width: 450px;
 }
 .title {
     text-align: center;

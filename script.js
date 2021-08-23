@@ -12,7 +12,7 @@ function createGrid(gridNumber) {
        container.appendChild(square);
     }
 }
-createGrid(16,16);
+createGrid(16);
 
 function mouseOver(target) {
     target.style.backgroundColor= 'black';
@@ -27,10 +27,11 @@ container.addEventListener("mouseover", function(e) {
 
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', () => {
-    document.querySelectorAll("div").forEach(square => square.style.backgroundColor= "white");
+    document.querySelectorAll("div").forEach(square => square.style.backgroundColor= "white")
+} );
 btn.addEventListener('click', () => {
     let newGridNumber= prompt("Choose size for your grid");
     createGrid(newGridNumber);
-} )
+
    
 });
