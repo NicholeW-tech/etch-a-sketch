@@ -31,6 +31,12 @@ btn.addEventListener('click', () => {
 } );
 btn.addEventListener('click', () => {
     let newGridNumber= prompt("Choose size for your grid");
-    createGrid(newGridNumber);
+    if (isNaN(newGridNumber)) {
+        alert ("Please enter a valid number")}
+    else if (newGridNumber=>101) {
+        alert ("Please enter a valid number")}
+    else {
+        createGrid(newGridNumber);
+    }
    
 });
