@@ -5,6 +5,7 @@
     max-height: 450px;
     max-width: 450px;
     align-items:absolute;
+    overflow: hidden;
 }
 .gridItem {
     padding: 50%;
@@ -12,11 +13,17 @@
     background-color:white;
     max-height: 450px;
     max-width: 450px;
+    
 }
 .title {
     text-align: center;
 }
 .center {
        text-align: center;
-      
+      }
+
+      .btn {
+        max-height: 450px;
+        max-width: 450px;
+        
       }

@@ -32,6 +32,5 @@ btn.addEventListener('click', () => {
 btn.addEventListener('click', () => {
     let newGridNumber= prompt("Choose size for your grid");
     createGrid(newGridNumber);
-
    
 });
