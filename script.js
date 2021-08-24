@@ -30,13 +30,10 @@ btn.addEventListener('click', () => {
     document.querySelectorAll("div").forEach(square => square.style.backgroundColor= "white")
 } );
 btn.addEventListener('click', () => {
-    let newGridNumber= prompt("Choose size for your grid");
-    if (isNaN(newGridNumber)) {
-        alert ("Please enter a valid number")}
-    else if (newGridNumber=>101) {
+    let newGridNumber= prompt("Choose a number between 0 and 100 for your grid size");
+    if (isNaN(newGridNumber)|| newGridNumber >= 101) {
         alert ("Please enter a valid number")}
     else {
         createGrid(newGridNumber);
     }
-   
 });

@@ -1,6 +1,6 @@
 .grid {
     display: grid;
-    background-color: blueviolet;
+    background-color: blueviolet; /* kept this to see if any gaps would pop up in my resizing */
     border: 20px ridge rgb(177, 6, 6);
     max-height: 450px;
     max-width: 450px;
@@ -22,8 +22,4 @@
        text-align: center;
       }
 
-      .btn {
-        max-height: 450px;
-        max-width: 450px;
-        
-      }
+      
