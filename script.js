@@ -34,7 +34,10 @@ btn.addEventListener('click', () => {
     if (isNaN(newGridNumber)|| newGridNumber >= 101) {
         alert ("Please enter a valid number")}
     else {
-        container.removeChild(container.firstChild);
+        let container = document.getElementById('container');
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
 
         createGrid(newGridNumber);
     }
